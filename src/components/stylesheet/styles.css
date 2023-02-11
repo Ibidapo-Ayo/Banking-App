@@ -1,0 +1,22 @@
+
+.feature-form{
+    width: 500px;
+    height: 90px;
+}
+.form-i::placeholder{
+    font-weight: 500;
+}
+
+.banner_text {
+    font-family: 'Poppins', sans-serif;
+    line-height: 60px !important;
+}
+@media screen and (max-width: 599px){
+    .banner_text{
+        line-height: 40px !important;
+        width: 300px;
+    }
+    .feature-form{
+        width: 100%;
+    }
+}
