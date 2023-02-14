@@ -13,12 +13,14 @@ module.exports = {
       'white': '#ffffff',
       'blue': '#2F06B9',
       'red': '#FF0606',
+      'black': '#000000',
       'gray': {
         'textGray':'#333333',
         100: '#efefef90',
         200: '#efefef',
         300: '#707070',
       },
+      'orange': '#FFBB00',
       'purple': {
         100: 'rgba(47,6,185,.7)',
         200: 'rgba(47,6,185,.3)'

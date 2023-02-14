@@ -1,18 +1,22 @@
 
-import './App.css'
-import NavBar from './components/NavBar';
-import Banner from './components/Banner';
-import Features from './components/Features';
-
+import { NavigationBarProvider } from "./components/useContext";
+import { Routes, Route } from "react-router";
+import LandingPage from "./components/LandingPage";
+import Signup, { Signin } from "./components/signup_pages";
 function App() {
-
   return (
     <div>
-     <NavBar />
-     <Banner />
-     <Features />
+      <NavigationBarProvider>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/signup' element={<Signup />} />
+        </Routes>
+
+       
+      </NavigationBarProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

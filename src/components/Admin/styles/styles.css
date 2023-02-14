@@ -1,0 +1,15 @@
+.nav{
+    height: 100vh;
+}
+.search-form{
+    width: 450px;
+}
+.text-smaller{
+    font-size: 0.5rem;
+}
+.cards{
+    transition: 0.5s all;
+}
+.border-dash{
+    border: 2px blue dashed;
+}
