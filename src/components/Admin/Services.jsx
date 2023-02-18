@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MainServices } from "./Services/ServicesData";
+import { UserContext } from "../signup_pages/UserContext";
+
 
 function Services() {
+  const {user} = useContext(UserContext)
   return (
     <div className="container mt-10">
       <h2 className="text-blue font-bold md:text-3xl text">
-        Hello Welcome Ayomide!
+        Hello Welcome {user.displayName}
       </h2>
       <div className="flex flex-row space-x-10 mt-10">
         {MainServices.map(services => (

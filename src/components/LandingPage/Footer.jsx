@@ -7,28 +7,28 @@ function Footer() {
       <div className="space-y-6 mb-6">
           <h1 className="text-1xl md:text-2xl font-bold">Company</h1>
           <ul className='space-y-3'>
-              <li>> About</li>
-              <li>> Carrers</li>
-              <li>> Contact</li>
-              <li>> FAQs</li>
+              <li> About</li>
+              <li>Carrers</li>
+              <li> Contact</li>
+              <li> FAQs</li>
           </ul>
       </div>
       <div className='space-y-6'>
           <h1 className="text-1xl md:text-2xl font-bold">Company</h1>
           <ul className='space-y-3'>
-              <li>> About</li>
-              <li>> Carrers</li>
-              <li>> Contact</li>
-              <li>> FAQs</li>
+              <li> About</li>
+              <li> Carrers</li>
+              <li> Contact</li>
+              <li> FAQs</li>
           </ul>
       </div>
       <div className='space-y-6'>
           <h1 className="text-1xl md:text-2xl font-bold">Company</h1>
           <ul className='space-y-3'>
-              <li>> About</li>
-              <li>> Carrers</li>
-              <li>> Contact</li>
-              <li>> FAQs</li>
+              <li> About</li>
+              <li> Carrers</li>
+              <li> Contact</li>
+              <li> FAQs</li>
           </ul>
       </div>
       </div>

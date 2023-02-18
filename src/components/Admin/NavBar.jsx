@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {useNavigate} from 'react-router-dom'
 import "./styles/styles.css";
-
+import { UserContext } from "../signup_pages/UserContext";
 import { NavLink, NavLink2, NavLink3 } from "./NavBar/nav_data";
 
 function NavBar() {
+  const {logout} = useContext(UserContext)
+  const navigate = useNavigate()
+  const handleLogout = async () =>{
+    try {
+      await logout()
+      navigate('/')
+      console.log("Logged out succesfully")
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
   return (
     <div>
        <div className="w-60 nav flex flex-col hidden md:block shadow justify-center px-10 pt-10">
@@ -35,6 +47,9 @@ function NavBar() {
                 <i>{referral_link.navicon}</i> {referral_link.navlink}
               </li>
             ))}
+            <li className="text-red cursor-pointer" onClick={handleLogout}>
+              Logout
+            </li>
           </ul>
         </div>
       </div>

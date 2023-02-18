@@ -1,4 +1,11 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+.showPassword{
+    font-size: 13px;
+     position: absolute;
+     transition: 1s all ease-in-out;
+}
+
+
 

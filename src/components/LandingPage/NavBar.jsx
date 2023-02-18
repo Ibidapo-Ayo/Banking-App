@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import Logo from "../../assets/images/PalmLoan.png";
-import { NavigationBarContext } from "../useContext";
+import { GlobalConText } from "../useContext";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -21,7 +21,8 @@ function NavBar() {
       text: "Contact"
     }
   ];
-  const {clicked, setClicked} = useContext(NavigationBarContext)
+  const {click} = useContext(GlobalConText)
+  const [clicked, setClicked] = click;
 
   return (
     <div>

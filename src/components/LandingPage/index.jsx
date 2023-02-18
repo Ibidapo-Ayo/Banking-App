@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import NavBar from './NavBar';
 import Banner from './Banner';
 import Features from './Features';
 import Footer from './Footer';
+import { GlobalConText } from '../useContext';
+import Spinner from '../Spinner';
 
 function LandingPage() {
+  const { Loading } = useContext(GlobalConText);
+  const [isLoading, setIsLoading] = Loading
+
+  useEffect(() => {
+    setIsLoading(true)
+    setTimeout(()=>{
+      setIsLoading(false)
+    }, 3000)
+    },[]);
   return (
     <div>
-      <NavBar />
-      <Banner />
-      <Features />
-      <Footer />
+   {isLoading ? <Spinner /> : 
+    <div>
+       <NavBar />
+     <Banner />
+     <Features />
+     <Footer />
+    </div>
+  }
     </div>
   )
 }
