@@ -1,60 +1,65 @@
-import React, { useContext } from 'react'
-import {useNavigate} from 'react-router-dom'
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "./styles/styles.css";
 import { UserContext } from "../signup_pages/UserContext";
-import { NavLink, NavLink2, NavLink3 } from "./NavBar/nav_data";
+import { NavLink } from "./NavBar/nav_data";
+
+import Logo from "../../assets/images/PalmLoan.png";
+import dp from "../../assets/images/dp.jpg";
+import { FiLogOut } from "react-icons/fi";
 
 function NavBar() {
-  const {logout} = useContext(UserContext)
-  const navigate = useNavigate()
-  const handleLogout = async () =>{
+  const { logout } = useContext(UserContext);
+  const navigate = useNavigate();
+  const handleLogout = async () => {
     try {
-      await logout()
-      navigate('/')
-      console.log("Logged out succesfully")
+      await logout();
+      navigate("/signin");
+      console.log("Logged out succesfully");
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
     }
-  }
+  };
   return (
     <div>
-       <div className="w-60 nav flex flex-col hidden md:block shadow justify-center px-10 pt-10">
-        <div className="space-y-6 mb-10">
+      <div className="w-[250px] nav flex flex-col hidden md:block items-center shadow justify-center px-0 pt-10">
+        <div className="flex flex-col w-100 px-0 items-center space-y-3">
+          <img src={Logo} className="w-[150px] " alt="" />
+          <img src={dp} className="w-[70px] h-[70px] rounded-full" alt="" />
+          <div
+            className="flex flex-col
+items-center -space-y-1"
+          >
+            <h3 className="text-[20px]">Ibidapo Ayomide</h3>
+            <h3 className="text-[25px]">NGN 0.00</h3>
+          </div>
+        </div>
+
+        <div className="mb-10 space-y-4 px-6">
+          <hr />
           <h6 className="text-blue font-bold">Menu</h6>
           <ul className="space-y-5">
             {NavLink.map(menu_link => (
-              <li key={menu_link.id} className="text-1xl cursor-pointer">
-                <span>{menu_link.navicon}</span> {menu_link.navlink}
+              <li
+                key={menu_link.id}
+                className="text-[20px] cursor-pointer w-100 flex flex-row space-x-1 items-center"
+              >
+                <span>{menu_link.navicon} </span>
+                <span>{menu_link.navlink}</span>
               </li>
             ))}
-          </ul>
-        </div>
-        <div className="space-y-6 mb-10">
-          <h6 className="text-blue font-bold">Payments</h6>
-          <ul className="space-y-5 ">
-            {NavLink2.map(payment_link => (
-              <li key={payment_link.id} className="text-1xl cursor-pointer">
-                <i>{payment_link.navicon}</i> {payment_link.navlink}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="space-y-6">
-          <h6 className="text-blue font-bold">Referrals</h6>
-          <ul className="space-y-5">
-            {NavLink3.map(referral_link => (
-              <li key={referral_link.id} className="text-1xl cursor-pointer">
-                <i>{referral_link.navicon}</i> {referral_link.navlink}
-              </li>
-            ))}
-            <li className="text-red cursor-pointer" onClick={handleLogout}>
-              Logout
+            <li
+              className="text-red cursor-pointer text-[20px] flex flex-row space-x-1 items-center"
+              onClick={handleLogout}
+            >
+            <span><FiLogOut /></span>
+            <span>  Logout</span>
             </li>
           </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

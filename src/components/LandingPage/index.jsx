@@ -5,6 +5,7 @@ import Features from './Features';
 import Footer from './Footer';
 import { GlobalConText } from '../useContext';
 import Spinner from '../Spinner';
+import Testimonial from './Testimonial';
 
 function LandingPage() {
   const { Loading } = useContext(GlobalConText);
@@ -23,6 +24,7 @@ function LandingPage() {
        <NavBar />
      <Banner />
      <Features />
+     <Testimonial />
      <Footer />
     </div>
   }

@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Transaction from "./Transaction";
 import Card from "./Card";
 import Spinner from "../Spinner";
+import './styles/styles.css'
 
 function DashBoard() {
 
@@ -20,7 +21,7 @@ function DashBoard() {
     <div className="">
     {isLoading ? <Spinner /> :
      <div>
-    <Dashboard />
+    {/* <Dashboard /> */}
       <div className="flex flex-row space-x-20">
         <div className="w-[13%]">
           <NavBar />

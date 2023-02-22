@@ -1,55 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MainServices } from "./Services/ServicesData";
-import { UserContext } from "../signup_pages/UserContext";
-
+import { UserContext } from "../signup_pages/UserContext"
+import TopUp from "./Banking/TopUp";
 
 function Services() {
-  const {user} = useContext(UserContext)
+  const { user } = useContext(UserContext);
   return (
-    <div className="container mt-10">
-      <h2 className="text-blue font-bold md:text-3xl text">
-        Hello Welcome {user.displayName}
-      </h2>
-      <div className="flex flex-row space-x-10 mt-10">
-        {MainServices.map(services => (
-          <div
-            key={services.id}
-            className="shadow-2xl rounded-3xl w-60 h-40 px-4 py-10 cursor-pointer hover:-mt-3 cards"
-            style={{
-              backgroundImage: ` linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${services.bgImage})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover"
-            }}
-          >
-            <h5>{services.ServiceIcons.icon1}</h5>
-            <div className="flex flex-row w-full items-center">
-              <h2
-                className="font-bold text-2xl"
-                style={{ color: `${services.color}` }}
-              >
-                {services.ServiceTitle}
-              </h2>
-              <p className="text-smaller font-semibold">
-                {services.moreInfo.dueDate}
-              </p>
-            </div>
-            <div className="flex flex-row w-full items-center">
-              <h3 className="font-bold text-black text-xl">
-                {services.moreInfo.money}
-              </h3>
-              <p className="font-semibold ml-2">{services.moreInfo.bonus}</p>
-            </div>
-
-            <a
-              href="#"
-              className="font-bold"
-              style={{ color: `${services.color}` }}
-            >
-              {services.ServiceLink}
-            </a>
-          </div>
-        ))}
-      </div>
+    <div className="container mt-10 w-100">
+      {/* <h2 className="text-blue font-bold md:text-[20px]">
+        Dashboard {user && user.displayName}
+      </h2> */}
+      <div className="grid grid-cols-3 gap-4">
+     
+        <div className="w-[280px] h-[220px] bg-gray-100 flex flex-col rounded-[5px] px-3 py-3">
+        <h3 className="text-[20px] font-semibold">My Balance</h3>
+        <h3 className="text-[30px] text-center font-medium mt-3">NGN 0.00</h3>
+        <button className="bg-purple-100 p-3 w-[150px] rounded-[5px] mx-auto text-white mt-5 mb-4">Add Fund</button>
+        <p className="underline text-center text-[10px] text-purple-100 cursor-pointer">Transaction history</p>
+        </div>
+        <TopUp />
+        </div>
     </div>
   );
 }

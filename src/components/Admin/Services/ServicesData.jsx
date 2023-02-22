@@ -8,7 +8,7 @@ export const MainServices = [
             icon1: 'icon1',
             icon2: 'icon2'
         },
-        ServiceTitle: 'Balance',
+        ServiceTitle: 'My Balance',
         ServiceLink: 'Add Fund',
         moreInfo: {
             money: '#20000'
@@ -47,6 +47,20 @@ export const MainServices = [
         color: '#FF0000'
     },
     {
+        id: 3,
+        ServiceIcons: {
+            icon1: 'icon1',
+            icon2: 'icon2'
+        },
+        ServiceTitle: 'Savings',
+        ServiceLink: 'Save more',
+        moreInfo: {
+            money: '#50,000.99',
+            bonus: ''
+        },
+        bgImage: Bg2,
+        color: '#FFBB00'
+    },  {
         id: 3,
         ServiceIcons: {
             icon1: 'icon1',

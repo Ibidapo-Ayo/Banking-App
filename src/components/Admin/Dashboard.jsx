@@ -7,10 +7,10 @@ function Dashboard() {
     const [search, setSearch] = useState('')
   return (
     <div>
-      <div className="flex flex-row justify-between items-center  shadow md:shadow-2xl w-full px-5 md:px-18 py-3">
+      <div className="flex flex-row justify-between items-center  shadow md:shadow-2xl w-full px-5 md:px-18 py-2">
         <div className="flex flex-row justify-between items-center md:w-1/2 w-0">
           <div className="hidden md:block">
-            <img src={Logo} className="w-1/2" alt="" />
+            <img src={Logo} className="w-1/3" alt="" />
           </div>
           <div className="hidden md:block">
           <form action="#">

@@ -84,3 +84,13 @@
     background: linear-gradient(to bottom, rgba(47,6,185,.2), rgba(0,0,0,.2)), url('../../assets/images/footer_bg.png');
     /* height: 500px; */
 }
+.border-2xl{
+    border: 3px solid #efef;
+}
+
+.slick-slide > div {
+    margin: 0 -10px;
+}
+.slick-list {
+    margin: 0 -10px;
+}
